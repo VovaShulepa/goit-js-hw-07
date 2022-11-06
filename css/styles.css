@@ -42,3 +42,15 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+
+.text {
+  text-decoration: none;
+  font-weight: 700;
+  tab-size: 35px;
+  color: rgb(236, 240, 17);
+}
+
+.sl-wrapper {
+  background: linear-gradient(to right, #544a7d, #ffd452);
+}

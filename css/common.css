@@ -11,6 +11,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  background: linear-gradient(to right, #544a7d, #ffd452);
 }
 
 input {
