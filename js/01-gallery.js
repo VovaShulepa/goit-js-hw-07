@@ -33,14 +33,15 @@ function onImageClick(evt) {
     return;
   }
   const instance = basicLightbox.create(`
-    <img src="${evt.target.dataset.source}" width="800" height="600">
+    <img src="${evt.target.dataset.source}" alt="${evt.target.alt}" width="800" height="600">
 `);
   instance.show();
 
   // Close the lightbox
-  divEl.addEventListener("keydown", (evt) => {
+  function onKeyPress(evt) {
     if (evt.code === "Escape") {
+      // window.removeEventListener("keydown", onKeyPress);
       instance.close();
     }
-  });
+  }
 }

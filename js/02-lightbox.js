@@ -5,23 +5,25 @@ console.log(galleryItems);
 
 const galleryEl = document.querySelector(".gallery");
 
-const createGalleryItems = () => {
-  const img = galleryItems
+galleryEl.insertAdjacentHTML("beforeend", createGalleryItems(galleryItems));
+
+function createGalleryItems(items) {
+  return items
     .map(
-      (item) => ` 
+      (item) => `  <li>
         <a class="gallery__item" href="${item.original}">
          <img
          class="gallery__image"
          src="${item.preview}"
-         alt="${item.description}"/>
-        </a>`
+         alt="${item.description}"
+        />
+        </a>
+     </li>`
     )
     .join("");
-  galleryEl.innerHTML = img;
-};
+}
 
-createGalleryItems();
-
-let lightbox = new SimpleLightbox(".gallery a", {
+const lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
   captionDelay: 250,
 });
