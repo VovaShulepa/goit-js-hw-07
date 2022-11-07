@@ -23,7 +23,5 @@ const createGalleryItems = () => {
 createGalleryItems();
 
 let lightbox = new SimpleLightbox(".gallery a", {
-  captions: true,
-  captionData: "alt",
-  captionDelay: 9250,
+  captionDelay: 250,
 });
