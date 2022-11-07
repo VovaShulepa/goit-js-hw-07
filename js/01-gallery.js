@@ -36,11 +36,12 @@ function onImageClick(evt) {
     <img src="${evt.target.dataset.source}" alt="${evt.target.alt}" width="800" height="600">
 `);
   instance.show();
+  window.addEventListener("keydown", onKeyPress);
 
   // Close the lightbox
   function onKeyPress(evt) {
     if (evt.code === "Escape") {
-      // window.removeEventListener("keydown", onKeyPress);
+      window.removeEventListener("keydown", onKeyPress);
       instance.close();
     }
   }
